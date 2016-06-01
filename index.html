@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>traversing</title>
+	<style>
+		.table {
+		    border-collapse: collapse;
+		    width: 500px;
+		    text-align: center;
+		    margin: 0 auto;
+		}
+
+		.table, .table tr{
+		    border: 1px solid black;
+		}
+		form{
+			margin-top: 20px;
+		}
+		
+
+
+	</style>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('form').submit(function(){
+				var first = $("#first").val();
+				var last = $("#last").val();
+				var email = $("#email").val();
+				var phone = $("#phone").val();
+				var string = "<tr><td>" + first + "</td><td>" + last + "</td><td>" + email + "</td><td>" + phone + "</td></tr>"
+
+			$("#userAdded").append(string);
+				return false;
+			})
+		})
+	</script>
+</head>
+<body>
+	<table class="table">
+		<thead>
+			<tr>
+			    <td>First name</td>
+			    <td>Last name</td>
+			    <td>Email Address</td>
+			    <td>Contact #</td>
+		    </tr>
+		</thead>
+		<tbody id="userAdded">
+			
+		</tbody>		  
+	</table>
+
+	<form>
+		<fieldset> 
+			<legend><h1>Add User</h1></legend>
+			<table>
+				<tbody>
+				<tr><td><label for="first_name">First Name:</label></td><td><input id="first" type="text" name="first_name" placeholder="First Name"></td></tr>
+				<tr><td><label for="last_name">Last Name:</label></td><td><input id="last"  type="text" name="last_name" placeholder="Last Name"></td></tr>
+				<tr><td><label for="email">Email Address:</label></td><td><input id="email" type="email" name="email" placeholder="Email Address"><td></tr>
+				<tr><td><label for="phone">Contact No.:</label></td><td><input id="phone" type="phone" name="phone" placeholder="Phone #"></td></tr>
+				</tbody>
+			</table>
+			<input type="submit" value="Add User">
+		</fieldset>
+	</form>
+</body>
+</html>
