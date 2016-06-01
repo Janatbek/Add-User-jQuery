@@ -1,0 +1,15 @@
+.table {
+		    
+border-collapse: collapse;
+width: 500px;
+text-align: center;
+margin: 0 auto;
+}
+
+.table, .table tr {
+    border: 1px solid black;
+}
+
+form{
+	margin-top: 20px;
+}
